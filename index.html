@@ -6,6 +6,30 @@
     <title>Canvas API</title>
 </head>
 <body>
-    <canvas></canvas>
+    <canvas id="miunCanvas" width="300" height="300" style="border: 1px black solid;">
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("miunCanvas"); //pick element
+        const ctx = canvas.getContext("2d"); //for tools (properties and methods)
+        ctx.fillStyle = "lawngreen"; // objektin täyttöväri
+        ctx.fillRect(50,50,200,200); //method fillRect(x, y, width, height)
+        ctx.beginPath() //uusi polku
+        ctx.moveTo(10, 10) // alkupiste
+        ctx.lineTo(290, 290) // loppupiste
+        ctx.lineWidth = 10 // viivanpaksuus
+        ctx.strokeStyle = 'red' // väri
+        ctx.lineCap = 'round' // päädyn muoto 'butt' 'round' 'square'
+        ctx.stroke() // piirto
+    </script>
+    <script>
+        const canvas1 = document.getElementById("miunCanvas"); //pick element
+        const ctx1 = canvas1.getContext("2d"); //for tools (properties and methods)
+        ctx1.beginPath() //uusi polku
+        ctx1.arc(110, 50, 40, 0, 2 * Math.PI); // ympyrä
+        ctx1.lineWidth = 5;
+        ctx1.strokeStyle = 'black'
+        ctx1.stroke() // piirto
+    </script>
 </body>
 </html>
