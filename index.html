@@ -12,7 +12,7 @@
     <script>
         const canvas = document.getElementById("miunCanvas"); //pick element
         const ctx = canvas.getContext("2d"); //for tools (properties and methods)
-        ctx.fillStyle = "lawngreen"; // objektin täyttöväri
+        ctx.fillStyle = "rgb(0 255 0 / 50%)"; // objektin täyttöväri + läpinäkyvyys
         ctx.fillRect(50,50,200,200); //method fillRect(x, y, width, height)
         ctx.beginPath() //uusi polku
         ctx.moveTo(10, 10) // alkupiste
@@ -30,6 +30,13 @@
         ctx1.lineWidth = 5;
         ctx1.strokeStyle = 'black'
         ctx1.stroke() // piirto
+    </script>
+    <script>
+        const canvas2 = document.getElementById("miunCanvas"); //pick element
+        const ctx2 = canvas2.getContext("2d"); //for tools (properties and methods)
+        ctx2.strokeStyle = 'rgb(0 0 255 / 20%)'
+        ctx2.lineWidth = 20
+        ctx2.strokeRect(100, 110, 120, 120)
     </script>
 </body>
 </html>
