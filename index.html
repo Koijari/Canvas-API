@@ -14,8 +14,9 @@
         const ctx = canvas.getContext("2d"); //for tools (properties and methods)
         ctx.fillStyle = "rgb(0 255 0 / 50%)"; // objektin täyttöväri + läpinäkyvyys
         ctx.fillRect(50,50,200,200); //method fillRect(x, y, width, height)
-        ctx.beginPath() //uusi polku
+        ctx.beginPath() //uusi tehtävä
         ctx.moveTo(10, 10) // alkupiste
+        ctx.lineTo(100, 150) // välipiste
         ctx.lineTo(290, 290) // loppupiste
         ctx.lineWidth = 10 // viivanpaksuus
         ctx.strokeStyle = 'red' // väri
@@ -25,7 +26,7 @@
     <script>
         const canvas1 = document.getElementById("miunCanvas"); //pick element
         const ctx1 = canvas1.getContext("2d"); //for tools (properties and methods)
-        ctx1.beginPath() //uusi polku
+        ctx1.beginPath() //uusi tehtävä
         ctx1.arc(110, 50, 40, 0, 2 * Math.PI); // ympyrä
         ctx1.lineWidth = 5;
         ctx1.strokeStyle = 'black'
